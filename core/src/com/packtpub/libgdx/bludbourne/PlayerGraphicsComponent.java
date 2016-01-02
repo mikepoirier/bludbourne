@@ -1,9 +1,7 @@
 package com.packtpub.libgdx.bludbourne;
 
 import com.badlogic.gdx.graphics.Camera;
-import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.math.GridPoint2;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.packtpub.libgdx.bludbourne.EntityConfig.AnimationConfig;
@@ -67,21 +65,7 @@ public class PlayerGraphicsComponent extends GraphicsComponent {
 
                 for(AnimationConfig animationConfig : animationConfigs)
                 {
-                    Array<String> textureNames = animationConfig.getTexturePaths();
-                    Array<GridPoint2> points = animationConfig.getGridPoints();
-                    Entity.AnimationType animationType = animationConfig.getAnimationType();
-                    float frameDuration = animationConfig.getFrameDuration();
-                    Animation animation = null;
-
-                    if(textureNames.size == 1)
-                    {
-                        animation = loadAnimation(textureNames.get(0), points, frameDuration);
-                    } else if(textureNames.size == 2)
-                    {
-                        animation = loadAnimation(textureNames.get(0), textureNames.get(1), points, frameDuration);
-                    }
-
-                    animations.put(animationType, animation);
+                    loadAnimationConfig(animationConfig);
                 }
             }
         }

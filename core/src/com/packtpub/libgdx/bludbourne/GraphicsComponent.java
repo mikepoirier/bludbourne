@@ -103,8 +103,8 @@ public abstract class GraphicsComponent implements Component
         }
     }
 
-    protected Animation loadAnimation(String firstTexture, String secondTexture, Array<GridPoint2> points,
-                                      float frameDuration)
+    protected Animation loadAnimationConfig(String firstTexture, String secondTexture, Array<GridPoint2> points,
+                                            float frameDuration)
     {
         Utility.loadTextureAsset(firstTexture);
         Texture texture1 = Utility.getTextureAsset(firstTexture);
@@ -125,7 +125,7 @@ public abstract class GraphicsComponent implements Component
         return new Animation(frameDuration, animationKeyFrames, Animation.PlayMode.LOOP);
     }
 
-    protected Animation loadAnimation(String textureName, Array<GridPoint2> points, float frameDuration)
+    protected Animation loadAnimationConfig(String textureName, Array<GridPoint2> points, float frameDuration)
     {
         Utility.loadTextureAsset(textureName);
         Texture texture = Utility.getTextureAsset(textureName);
@@ -140,5 +140,21 @@ public abstract class GraphicsComponent implements Component
         }
 
         return new Animation(frameDuration, animationKeyFrames, Animation.PlayMode.LOOP);
+    }
+
+    protected void loadAnimationConfig(EntityConfig.AnimationConfig animationConfig) {
+        Array<String> textureNames = animationConfig.getTexturePaths();
+        Array<GridPoint2> points = animationConfig.getGridPoints();
+        Entity.AnimationType animationType = animationConfig.getAnimationType();
+        float frameDuration = animationConfig.getFrameDuration();
+        Animation animation = null;
+
+        if( textureNames.size == 1) {
+            animation = loadAnimationConfig(textureNames.get(0), points, frameDuration);
+        }else if( textureNames.size == 2){
+            animation = loadAnimationConfig(textureNames.get(0), textureNames.get(1), points, frameDuration);
+        }
+
+        animations.put(animationType, animation);
     }
 }

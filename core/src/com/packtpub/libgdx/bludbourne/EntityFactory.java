@@ -15,7 +15,7 @@ public class EntityFactory {
         NPC
     }
 
-    public static String playerConfig = "scripts/player.json";
+    public static final String PLAYER_CONFIG = "scripts/player.json";
 
     public static Entity getEntity(EntityType entityType)
     {
@@ -27,7 +27,7 @@ public class EntityFactory {
                         new PlayerPhysicsComponent(),
                         new PlayerGraphicsComponent());
                 entity.setEntityConfig(Entity.getEntityConfig(
-                        EntityFactory.playerConfig));
+                        EntityFactory.PLAYER_CONFIG));
                 entity.sendMessage(
                         Component.MESSAGE.LOAD_ANIMATIONS,
                         json.toJson(entity.getEntityConfig()));

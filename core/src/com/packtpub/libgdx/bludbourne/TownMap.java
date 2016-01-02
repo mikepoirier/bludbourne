@@ -1,6 +1,5 @@
 package com.packtpub.libgdx.bludbourne;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -41,9 +40,9 @@ public class TownMap extends Map
     @Override
     public void updateMapEntities(MapManager mapMgr, Batch batch, float delta)
     {
-        for(Entity entity : mapEntites)
+        for(int i = 0; i < mapEntites.size; i++)
         {
-            entity.update(mapMgr, batch, delta);
+            mapEntites.get(i).update(mapMgr, batch, delta);
         }
     }
 
