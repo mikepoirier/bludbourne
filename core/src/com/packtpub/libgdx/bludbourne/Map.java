@@ -88,11 +88,6 @@ public abstract class Map
         {
             Gdx.app.debug(TAG, "No spawns layer");
         }
-        for(MapObject object : spawnsLayer.getObjects())
-        {
-            Gdx.app.debug(TAG, String.format("Spawn Layer Object: %s",
-                                             object.getName()));
-        }
         setClosestStartPosition(playerStart);
 
         npcStartPositions = getNPCStartPositions();
