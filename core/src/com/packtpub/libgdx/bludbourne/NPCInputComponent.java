@@ -8,4 +8,16 @@ public class NPCInputComponent extends InputComponent {
     public void update(Entity entity, float delta) {
 
     }
+
+    @Override
+    public void dispose()
+    {
+
+    }
+
+    @Override
+    public void receiveMessage(String message)
+    {
+
+    }
 }

@@ -103,8 +103,8 @@ public class Entity
 
     public void update(MapManager mapMgr, Batch batch, float delta) {
         inputComponent.update(this, delta);
-        physicsComponent.update(this, delta);
-        graphicsComponent.update(this, delta);
+        physicsComponent.update(this, mapMgr, delta);
+        graphicsComponent.update(this, mapMgr, batch, delta);
     }
 
     public void dispose() {

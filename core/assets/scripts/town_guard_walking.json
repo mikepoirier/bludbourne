@@ -1,13 +1,13 @@
 {
-entityID : PLAYER
+entityID : TOWN_GUARD
 state : IDLE
 direction : DOWN
 animationConfig: [
 	{
-		frameDuration: 0.25
+	    frameDuration: 0.25
 		animationType: WALK_DOWN
 		texturePaths: [
-			sprites/characters/Warrior.png
+			sprites/characters/Paladin.png
 		]
 		gridPoints: [
 			{
@@ -30,10 +30,10 @@ animationConfig: [
 		]
 	}
 	{
-	    frameDuration: 0.25
+		frameDuration: 0.25
 		animationType: WALK_LEFT
 		texturePaths: [
-			sprites/characters/Warrior.png
+			sprites/characters/Paladin.png
 		]
 		gridPoints: [
 			{
@@ -56,10 +56,10 @@ animationConfig: [
 		]
 	}
 	{
-	    frameDuration: 0.25
+		frameDuration: 0.25
 		animationType: WALK_RIGHT
 		texturePaths: [
-			sprites/characters/Warrior.png
+			sprites/characters/Paladin.png
 		]
 		gridPoints: [
 			{
@@ -82,10 +82,10 @@ animationConfig: [
 		]
 	}
 	{
-	    frameDuration: 0.25
+		frameDuration: 0.25
 		animationType: WALK_UP
 		texturePaths: [
-			sprites/characters/Warrior.png
+			sprites/characters/Paladin.png
 		]
 		gridPoints: [
 			{

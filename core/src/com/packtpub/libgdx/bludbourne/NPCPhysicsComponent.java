@@ -5,7 +5,20 @@ package com.packtpub.libgdx.bludbourne;
  */
 public class NPCPhysicsComponent extends PhysicsComponent {
     @Override
-    public void update(Entity entity, float delta) {
+    public void update(Entity entity, MapManager mapMgr, float delta)
+    {
+
+    }
+
+    @Override
+    public void dispose()
+    {
+
+    }
+
+    @Override
+    public void receiveMessage(String message)
+    {
 
     }
 }

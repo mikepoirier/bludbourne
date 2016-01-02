@@ -8,16 +8,16 @@ import com.badlogic.gdx.utils.Json;
 public class EntityFactory {
     private static Json json = new Json();
 
-    private enum EntityType
+    public enum EntityType
     {
         PLAYER,
         DEMO_PLAYER,
         NPC
     }
 
-    private static String player_config = "scripts/player.json";
+    public static String playerConfig = "scripts/player.json";
 
-    public static Entity getentity(EntityType entityType)
+    public static Entity getEntity(EntityType entityType)
     {
         switch (entityType)
         {
@@ -27,7 +27,7 @@ public class EntityFactory {
                         new PlayerPhysicsComponent(),
                         new PlayerGraphicsComponent());
                 entity.setEntityConfig(Entity.getEntityConfig(
-                        EntityFactory.PLAYER_CONFIG));
+                        EntityFactory.playerConfig));
                 entity.sendMessage(
                         Component.MESSAGE.LOAD_ANIMATIONS,
                         json.toJson(entity.getEntityConfig()));
