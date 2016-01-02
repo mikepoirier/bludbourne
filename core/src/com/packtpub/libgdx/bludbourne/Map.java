@@ -88,6 +88,11 @@ public abstract class Map
         {
             Gdx.app.debug(TAG, "No spawns layer");
         }
+        for(MapObject object : spawnsLayer.getObjects())
+        {
+            Gdx.app.debug(TAG, String.format("Spawn Layer Object: %s",
+                                             object.getName()));
+        }
         setClosestStartPosition(playerStart);
 
         npcStartPositions = getNPCStartPositions();
@@ -203,7 +208,7 @@ public abstract class Map
 
             if(objectName.equalsIgnoreCase(PLAYER_START))
             {
-                ((RectangleMapObject) object).getRectangle().setPosition(playerStartPositionRect);
+                ((RectangleMapObject) object).getRectangle().getPosition(playerStartPositionRect);
                 float distance = position.dst2(playerStartPositionRect);
 
                 Gdx.app.debug(TAG, String.format("DISTANCE: %.2f for %s", distance, currentMapType.toString()));
