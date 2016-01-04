@@ -1,6 +1,7 @@
 package com.packtpub.libgdx.bludbourne;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
@@ -49,7 +50,7 @@ public class Entity
         }
     }
 
-    public static enum AnimationType {
+    public enum AnimationType {
         WALK_LEFT,
         WALK_RIGHT,
         WALK_UP,
@@ -107,6 +108,11 @@ public class Entity
         graphicsComponent.update(this, mapMgr, batch, delta);
     }
 
+    public void updateInput(float delta)
+    {
+        inputComponent.update(this, delta);
+    }
+
     public void dispose() {
         for(Component component : components) {
             component.dispose();
@@ -139,5 +145,10 @@ public class Entity
 
 
         return configs;
+    }
+
+    public InputProcessor getInputProcessor()
+    {
+        return inputComponent;
     }
 }

@@ -1,5 +1,6 @@
 package com.packtpub.libgdx.bludbourne;
 
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.utils.Json;
 
 import java.util.HashMap;
@@ -8,7 +9,7 @@ import java.util.Map;
 /**
  * Created by michael.poirier on 12/31/2015.
  */
-public abstract class InputComponent implements Component
+public abstract class InputComponent implements Component, InputProcessor
 {
     protected static Map<Keys, Boolean> keys = new HashMap<>();
     protected static Map<Mouse, Boolean> mouseButtons = new HashMap<>();

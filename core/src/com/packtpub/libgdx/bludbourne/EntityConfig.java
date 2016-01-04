@@ -2,7 +2,9 @@ package com.packtpub.libgdx.bludbourne;
 
 import com.badlogic.gdx.math.GridPoint2;
 import com.badlogic.gdx.utils.Array;
+import com.packtpub.libgdx.bludbourne.Entity.Direction;
 import com.packtpub.libgdx.bludbourne.Entity.State;
+import com.packtpub.libgdx.bludbourne.InventoryItem.ItemTypeID;
 
 /**
  * Created by michael.poirier on 12/31/2015.
@@ -10,8 +12,9 @@ import com.packtpub.libgdx.bludbourne.Entity.State;
 public class EntityConfig
 {
     private Array<AnimationConfig> animationConfig;
+    private Array<ItemTypeID> inventory;
     private State state;
-    private Entity.Direction direction;
+    private Direction direction;
     private String entityID;
 
     EntityConfig()
@@ -39,13 +42,13 @@ public class EntityConfig
         this.state = state;
     }
 
-    public Entity.Direction getDirection()
+    public Direction getDirection()
     {
         return direction;
     }
 
     public void setDirection(
-            Entity.Direction direction)
+            Direction direction)
     {
         this.direction = direction;
     }
@@ -58,6 +61,17 @@ public class EntityConfig
     public void setEntityID(String entityID)
     {
         this.entityID = entityID;
+    }
+
+    public Array<ItemTypeID> getInventory()
+    {
+        return inventory;
+    }
+
+    public void setInventory(
+            Array<ItemTypeID> inventory)
+    {
+        this.inventory = inventory;
     }
 
     public static class AnimationConfig

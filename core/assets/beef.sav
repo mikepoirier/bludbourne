@@ -1,0 +1,84 @@
+{
+townMapStartPosition: {
+	class: com.badlogic.gdx.math.Vector2
+	x: 208
+	y: 16
+}
+castleOfDoomMapStartPosition: {
+	class: com.badlogic.gdx.math.Vector2
+	x: 248
+	y: 24
+}
+topWorldMapStartPosition: {
+	class: com.badlogic.gdx.math.Vector2
+	x: 256
+	y: 336
+}
+playerEquipInventory: [
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 1
+		itemTypeAtLocation: HELMET05
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 6
+		itemTypeAtLocation: BOOTS03
+		numberItemsAtLocation: 1
+	}
+]
+playerInventory: [
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		itemTypeAtLocation: ARMOR04
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 3
+		itemTypeAtLocation: POTIONS01
+		numberItemsAtLocation: 4
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 7
+		itemTypeAtLocation: SCROLL01
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 8
+		itemTypeAtLocation: SCROLL01
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 9
+		itemTypeAtLocation: SCROLL01
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 10
+		itemTypeAtLocation: SHIELD02
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 11
+		itemTypeAtLocation: WANDS02
+		numberItemsAtLocation: 1
+	}
+	{
+		class: com.packtpub.libgdx.bludbourne.ui.InventoryItemLocation
+		locationIndex: 12
+		itemTypeAtLocation: WEAPON01
+		numberItemsAtLocation: 1
+	}
+]
+currentMapType: {
+	class: java.lang.String
+	value: TOWN
+}
+}

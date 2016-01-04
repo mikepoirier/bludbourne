@@ -104,6 +104,11 @@ public abstract class Map
         return playerStart;
     }
 
+    public void setPlayerStart(Vector2 playerStart)
+    {
+        this.playerStart = playerStart;
+    }
+
     public abstract void updateMapEntities(MapManager mapMgr, Batch batch, float delta);
 
     public MapLayer getCollisionLayer()
